@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Dancing+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dancing Script", cursive;
+}
+
+body {
+  background-color: #ffe5ec;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 95vh;
+  background-color: #ff8fab;
+  justify-content: space-around;
+}
+
+.image img {
+  height: 95vh;
+}
+
+.content {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  justify-content: center;
+  gap: 20px;
+}
+
+.content h1 {
+  font-size: 70px;
+  color: #bf4b6a;
+}
+
+.content p {
+  font-size: 30px;
+  color: #ffe5ec;
+  font-family: "Bad Script", cursive;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 100px auto;
+}
+
+.box {
+  flex: 0 0 calc(20% - 10px);
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.box:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-front {
+  background-color: #ff8fab;
+}
+
+.flip-front img {
+  height: 250px;
+}
+
+.flip-back {
+  font-family: "Bad Script", cursive;
+  background-color: #bf4b6a;
+  color: #ffe5ec;
+  font-size: 16px;
+  transform: rotateY(180deg);
+  padding: 20px;
+  text-align: center;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #ff8fab;
+  color: #bf4b6a;
+  font-size: 50px;
+  padding: 50px;
+}
+
+.heart-icon {
+  width: 70px;
+}
